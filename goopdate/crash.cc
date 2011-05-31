@@ -67,7 +67,7 @@ using google_breakpad::ReportResult;
 
 namespace omaha {
 
-const TCHAR kPipeNamePrefix[] = _T("\\\\.\\pipe\\GoogleCrashServices");
+const TCHAR kPipeNamePrefix[] = _T("\\\\.\\pipe\\HouseOfLifeCrashServices");
 
 const ACCESS_MASK kPipeAccessMask = FILE_READ_ATTRIBUTES  |
                                     FILE_READ_DATA        |
@@ -85,7 +85,7 @@ ExceptionHandler* Crash::exception_handler_ = NULL;
 CrashGenerationServer* Crash::crash_server_ = NULL;
 
 bool Crash::is_machine_ = false;
-const TCHAR* const Crash::kDefaultProductName = _T("Google Error Reporting");
+const TCHAR* const Crash::kDefaultProductName = _T("HouseOfLife Error Reporting");
 
 HRESULT Crash::Initialize(bool is_machine) {
   is_machine_ = is_machine;

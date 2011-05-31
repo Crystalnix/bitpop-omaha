@@ -194,7 +194,7 @@ for omaha_version_info in env['omaha_versions_info']:
   # Force a rebuild when the version changes.
   env.Depends(version_res, '$MAIN_DIR/VERSION')
 
-  target_name = prefix + 'goopdate_unsigned.dll'
+  target_name = prefix + 'holupdate_unsigned.dll'
 
   # main.cc is included here because the linker gets confused if we try to
   # create a DLL without an entry point. There's probably a more accurate
@@ -221,7 +221,7 @@ for omaha_version_info in env['omaha_versions_info']:
   )
 
   signed_dll = temp_env.SignedBinary(
-      target=prefix + 'goopdate.dll',
+      target=prefix + 'holupdate.dll',
       source=unsigned_dll,
   )
 

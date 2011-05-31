@@ -61,7 +61,7 @@ import omaha_version_utils
 _msc_ver = 1400
 
 # TODO(Omaha) - Change this to match the official product name
-_PUBLISHER_NAME = 'Google'
+_PUBLISHER_NAME = 'HouseOfLife'
 _PRODUCT_NAME = 'Update'
 
 # The hash comes from the Thumbprint item in the Details tab of the file
@@ -73,9 +73,9 @@ _BUILD_SERVER_CERTIFICATE_HASH = 'fe5008fe0da7a2033816752d6eafe95214f5a7e1'
 # The proxy clsid needs to be changed anytime the interfaces in
 # google_update_idl.idl change, or when a new interface is added. Use
 # guidgen.exe to generate new clsids in the format 'static const struct GUID'.
-# PROXY_CLSID_IS = {29A96789-9595-4947-BEDB-0FCC776F7DB8}
-_PROXY_CLSID_IS = ('{0x29a96789, 0x9595, 0x4947, '
-    '{0xbe, 0xdb, 0xf, 0xcc, 0x77, 0x6f, 0x7d, 0xb8}}')
+# PROXY_CLSID_IS = {ff658802-28df-478f-a210-2fadc4b43273}
+_PROXY_CLSID_IS = ('{0xff658802, 0x28df, 0x478f, '
+    '{0xa2, 0x10, 0x2f, 0xad, 0xc4, 0xb4, 0x32, 0x73}}')
 
 
 # Windows is the only environment we bulid for, so create a specialized base

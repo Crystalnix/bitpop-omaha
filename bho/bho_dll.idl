@@ -31,7 +31,7 @@ import "ocidl.idl";
 // dummy interface.
 [
   object,
-  uuid(A91B50B2-48B3-40b1-86A3-0FE0AF3AB5BF),
+  uuid(9172b6ab-e9dc-43d7-98e7-b2968b4b6336),
 ]
 interface INotUsedInterface : IUnknown {
   HRESULT NotUsedFunction([in] BSTR not_used);
@@ -39,7 +39,7 @@ interface INotUsedInterface : IUnknown {
 
 
 [
-  uuid(B137D75E-D05F-4146-AD27-C106D89FB4F4),
+  uuid(e9d9b239-9e66-4758-aaa5-6be17a639433),
   version(1.0)
 ]
 library BhoDllLib {

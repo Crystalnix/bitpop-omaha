@@ -39,10 +39,10 @@ namespace omaha {
 #define kProductNameToReport    kAppName
 
 // prefix for any created files
-#define kFilePrefix  _T("GoogleUpdate")
+#define kFilePrefix  _T("HouseOfLifeUpdate")
 
 // prefix for any Win32 objects (mutexes, events, etc.)
-#define kLockPrefix   _T("_GOOGLE_UPDATE_")
+#define kLockPrefix   _T("_HOUSEOFLIFE_UPDATE_")
 
 //
 // Omaha's app ID
@@ -57,7 +57,7 @@ const GUID kGoopdateGuid = {0x430FD4D0, 0xB729, 0x4F61,
 //
 #define OFFLINE_DIR_NAME _T("Offline")
 
-#define OMAHA_REL_GOOGLE_DIR _T("Google")
+#define OMAHA_REL_GOOGLE_DIR _T("HouseOfLife")
 #define OMAHA_REL_CRASH_DIR OMAHA_REL_GOOGLE_DIR _T("\\CrashReports")
 #define OMAHA_REL_GOOPDATE_INSTALL_DIR OMAHA_REL_GOOGLE_DIR _T("\\Update")
 #define OMAHA_REL_LOG_DIR OMAHA_REL_GOOPDATE_INSTALL_DIR _T("\\Log")
@@ -79,13 +79,13 @@ const GUID kGoopdateGuid = {0x430FD4D0, 0xB729, 0x4F61,
 #define USER_KEY_NAME _T("HKCU")
 #define USER_KEY USER_KEY_NAME _T("\\")
 #define USERS_KEY _T("HKU\\")
-#define GOOGLE_MAIN_KEY _T("Software\\Google\\")
+#define GOOGLE_MAIN_KEY _T("Software\\HouseOfLife\\")
 #define GOOPDATE_MAIN_KEY GOOGLE_MAIN_KEY _T("Update\\")
 #define GOOPDATE_REG_RELATIVE_CLIENTS GOOPDATE_MAIN_KEY _T("Clients\\")
 #define GOOPDATE_REG_RELATIVE_CLIENT_STATE GOOPDATE_MAIN_KEY _T("ClientState\\")
 #define GOOPDATE_REG_RELATIVE_CLIENT_STATE_MEDIUM \
     GOOPDATE_MAIN_KEY _T("ClientStateMedium\\")
-#define GOOGLE_POLICIES_MAIN_KEY _T("Software\\Policies\\Google\\")
+#define GOOGLE_POLICIES_MAIN_KEY _T("Software\\Policies\\HouseOfLife\\")
 #define GOOPDATE_POLICIES_RELATIVE GOOGLE_POLICIES_MAIN_KEY _T("Update\\")
 
 #define USER_REG_GOOGLE USER_KEY GOOGLE_MAIN_KEY
@@ -226,7 +226,7 @@ const TCHAR* const kDefaultCountryCode = _T("us");
 const int kExtraMaxLength = 64 * 1024;  // 64 KB
 
 // The value that is used in the run key.
-const TCHAR* const kRunValueName = _T("Google Update");
+const TCHAR* const kRunValueName = _T("HouseOfLife Update");
 
 // Default brand code value when one is not specified.
 // This has been specifically assigned to Omaha.
@@ -315,10 +315,10 @@ const int kWaitForMSIExecuteMs                = 5 * 60000;  // 5 minutes.
 const TCHAR* const kLanguageVersionName = _T("LanguageId");
 
 // These must be in sync with the WiX files.
-const TCHAR* const kHelperInstallerName = _T("GoogleUpdateHelper.msi");
+const TCHAR* const kHelperInstallerName = _T("HouseOfLifeUpdateHelper.msi");
 const TCHAR* const kHelperInstallerProductGuid =
     _T("{A92DAB39-4E2C-4304-9AB6-BC44E68B55E2}");
-const TCHAR* const kHelperPatchName = _T("GoogleUpdateHelperPatch.msp");
+const TCHAR* const kHelperPatchName = _T("HouseOfLifeUpdateHelperPatch.msp");
 const TCHAR* const kHelperPatchGuid =
     _T("{E0D0D2C9-5836-4023-AB1D-54EC3B90AD03}");
 

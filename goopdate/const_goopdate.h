@@ -118,9 +118,9 @@ const TCHAR* const kRegValueUpdateAvailableSince  = _T("UpdateAvailableSince");
 
 // Registry values stored in the Update key.
 const TCHAR* const kRegValueOmahaEulaAccepted     = _T("eulaaccepted");
-const TCHAR* const kRegValueServiceName           = _T("gupdate_service_name");
-const TCHAR* const kRegValueTaskNameC             = _T("gupdate_task_name_c");
-const TCHAR* const kRegValueTaskNameUA            = _T("gupdate_task_name_ua");
+const TCHAR* const kRegValueServiceName           = _T("holupdate_service_name");
+const TCHAR* const kRegValueTaskNameC             = _T("holupdate_task_name_c");
+const TCHAR* const kRegValueTaskNameUA            = _T("holupdate_task_name_ua");
 const TCHAR* const kRegValueLastChecked           = _T("LastChecked");
 const TCHAR* const kRegValueOemInstallTimeSec     = _T("OemInstallTime");
 const TCHAR* const kRegValueInstalledPath         = _T("path");
@@ -134,22 +134,22 @@ const TCHAR* const kRegValueInstalledVersion      = _T("version");
 // This is deprecated in favor of kRegValueUsageStats.
 const TCHAR* const kLegacyRegValueCollectUsageStats = _T("CollectUsageStats");
 
-const TCHAR* const kLegacyServiceName           = _T("gupdate");
-const TCHAR* const kServicePrefix               = _T("gupdate");
+const TCHAR* const kLegacyServiceName           = _T("holupdate");
+const TCHAR* const kServicePrefix               = _T("holupdate");
 
-const TCHAR* const kScheduledTaskNameUserPrefix = _T("GoogleUpdateTaskUser");
+const TCHAR* const kScheduledTaskNameUserPrefix = _T("HouseOfLifeUpdateTaskUser");
 const TCHAR* const kScheduledTaskNameMachinePrefix =
     _T("GoogleUpdateTaskMachine");
 const TCHAR* const kScheduledTaskNameCoreSuffix = _T("Core");
 const TCHAR* const kScheduledTaskNameUASuffix   = _T("UA");
 
 // TODO(omaha): make these two below the same symbol.
-const TCHAR* const kServiceFileName              = _T("GoogleUpdate.exe");
-const TCHAR* const kGoopdateFileName             = _T("GoogleUpdate.exe");
-const TCHAR* const kGoopdateCrashHandlerFileName = _T("GoogleCrashHandler.exe");
-const TCHAR* const kGoopdateDllName              = _T("goopdate.dll");
-const TCHAR* const kGoopdateResourceDllName      = _T("goopdateres_%s.dll");
-const TCHAR* const kGoopdateResDllFindPattern    = _T("goopdateres_*.dll");
+const TCHAR* const kServiceFileName              = _T("HouseOfLifeUpdate.exe");
+const TCHAR* const kGoopdateFileName             = _T("HouseOfLifeUpdate.exe");
+const TCHAR* const kGoopdateCrashHandlerFileName = _T("HouseOfLifeCrashHandler.exe");
+const TCHAR* const kGoopdateDllName              = _T("holupdate.dll");
+const TCHAR* const kGoopdateResourceDllName      = _T("holupdateres_%s.dll");
+const TCHAR* const kGoopdateResDllFindPattern    = _T("holupdateres_*.dll");
 const char*  const kGoopdateDllEntryAnsi         = "DllEntry";
 
 

@@ -33,7 +33,7 @@ def _WriteAdmFile(target, source, env):
   return 0
 
 adm_output = env.Command(
-    target='$STAGING_DIR/GoogleUpdate.adm',
+    target='$STAGING_DIR/HouseOfLifeUpdate.adm',
     source=[],
     action=_WriteAdmFile,
     write_data=_adm_contents

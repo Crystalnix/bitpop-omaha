@@ -21,16 +21,16 @@ def GetListOfPayloadFiles(prefix,
                           languages,
                           product_version):
   payload_files = [
-      'GoogleUpdate.exe',
-      'GoogleCrashHandler.exe',
-      '%sgoopdate.dll' % (prefix),
+      'HouseOfLifeUpdate.exe',
+      'HouseOfLifeCrashHandler.exe',
+      '%sholupdate.dll' % (prefix),
       '%s%s' % (prefix, activex_filename),  # One-Click DLL
       '%s%s' % (prefix, bho_filename),      # BHO proxy DLL
-      'GoogleUpdateHelper.msi',
+      'HouseOfLifeUpdateHelper.msi',
       ]
 
   for language in languages:
-    payload_files += ['%sgoopdateres_%s.dll' % (prefix, language)]
+    payload_files += ['%sholupdateres_%s.dll' % (prefix, language)]
 
   return payload_files
 

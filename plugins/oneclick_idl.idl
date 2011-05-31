@@ -35,9 +35,9 @@ import "ocidl.idl";
 
 [
   object,
-  uuid(65CAE76D-A7FC-4629-A7C3-9AF61876894B),
+  uuid(ef47a549-8957-498a-923f-39544c774fa2),
   dual,
-  helpstring("Google Update One Click Control Automation Interface"),
+  helpstring("House of Life Update One Click Control Automation Interface"),
   pointer_default(unique)
 ]
 interface IGoogleUpdateOneClick : IDispatch
@@ -61,9 +61,9 @@ interface IGoogleUpdateOneClick : IDispatch
 };
 
 [
-  uuid(BBEFAF3A-5D73-4cc5-A2A1-34E5C55169B0),
+  uuid(9d0ea564-ac8b-4ac3-8e38-f9476c5e3ad4),
   version(1.0),
-  helpstring("Google Update One Click 1.0 Type Library")
+  helpstring("House of Life Update One Click 1.0 Type Library")
 ]
 library OneClickLib
 {
@@ -72,7 +72,7 @@ library OneClickLib
 
   [
     uuid(%s),
-    helpstring("Google Update One Click Control Class")
+    helpstring("House of Life Update One Click Control Class")
   ]
   coclass GoopdateOneClickControl
   {
