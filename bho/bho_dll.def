@@ -13,7 +13,7 @@
 ; limitations under the License.
 ; ========================================================================
 
-LIBRARY      "GoopdateBho.dll"
+LIBRARY      "HolupdateBho.dll"
 
 EXPORTS
   DllCanUnloadNow     PRIVATE

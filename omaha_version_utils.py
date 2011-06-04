@@ -18,7 +18,7 @@
 """Constants and utilities related to Omaha versions."""
 
 _ONECLICK_ACTIVEX_NAME = 'npGoogleOneClick'
-_BHO_NAME = 'GoopdateBho'
+_BHO_NAME = 'HolupdateBho'
 
 # List of languages that are fully supported in the current build.
 _OMAHA_LANGUAGES = [

@@ -29,7 +29,7 @@ namespace omaha {
 #define kGoogleHttpServer         _T("www.google.com")
 
 // Static string used as an identity for the "Omaha" Google domain.
-#define kGoopdateServer           _T("tools.google.com")
+#define kGoopdateServer           _T("localhost")
 
 // HTTP protocol prefix
 #define kProtoSuffix              _T("://")
@@ -46,10 +46,10 @@ namespace omaha {
 
 // Update checks and manifest requests.
 const TCHAR* const kUrlUpdateCheck =
-    _T("https://tools.google.com/service/update2");
+    _T("https://localhost/service/update2");
 
 // Pings.
-const TCHAR* const kUrlPing = _T("http://tools.google.com/service/update2");
+const TCHAR* const kUrlPing = _T("http://localhost/service/update2");
 
 // Crash reports.
 const TCHAR* const kUrlCrashReport =
