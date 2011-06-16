@@ -45,10 +45,10 @@ const TCHAR* const kQueryStringFormat =
 // Information about where to obtain Omaha info.
 // This must never change in Omaha.
 const TCHAR* const kRegValueProductVersion  = _T("pv");
-const TCHAR* const kRelativeGoopdateRegPath = _T("Software\\Google\\Update\\");
+const TCHAR* const kRelativeGoopdateRegPath = _T("Software\\HouseOfLife\\Update\\");
 const TCHAR* const kRelativeClientsGoopdateRegPath =
-    _T("Software\\Google\\Update\\Clients\\")
-    _T("{430FD4D0-B729-4F61-AA34-91526481799D}");
+    _T("Software\\HouseOfLife\\Update\\Clients\\")
+    _T("{32E4419B-847F-4870-8640-073EF02C1890}");
 
 // Starts another process via ::CreateProcess.
 HRESULT StartProcess(const TCHAR* process_name, TCHAR* command_line) {

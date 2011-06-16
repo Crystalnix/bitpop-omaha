@@ -47,10 +47,10 @@ namespace omaha {
 //
 // Omaha's app ID
 //
-#define GOOPDATE_APP_ID _T("{430FD4D0-B729-4F61-AA34-91526481799D}")
+#define GOOPDATE_APP_ID _T("{32E4419B-847F-4870-8640-073EF02C1890}")
 const TCHAR* const kGoogleUpdateAppId = GOOPDATE_APP_ID;
-const GUID kGoopdateGuid = {0x430FD4D0, 0xB729, 0x4F61,
-                            {0xAA, 0x34, 0x91, 0x52, 0x64, 0x81, 0x79, 0x9D}};
+const GUID kGoopdateGuid = {0x32E4419B, 0x847F, 0x4870,
+                            {0x86, 0x40, 0x07, 0x3E, 0xF0, 0x2C, 0x18, 0x90}};
 
 //
 // Directory names
