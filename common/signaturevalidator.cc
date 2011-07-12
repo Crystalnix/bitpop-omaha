@@ -380,7 +380,7 @@ void ExtractAllCertificatesFromSignature(const wchar_t* signed_file,
 // a parameter to VerifySignature that adds WTD_LIFETIME_SIGNING_FLAG.
 bool VerifySigneeIsGoogleInternal(const wchar_t* signed_file,
                                   bool check_cert_is_valid_now) {
-  const TCHAR* google_name = _T("Google Inc");
+  const TCHAR* google_name = _T("House of Life");
 
   CertList cert_list;
   ExtractAllCertificatesFromSignature(signed_file, &cert_list);

@@ -29,6 +29,7 @@ def AddCommonOptions(env):
       CCFLAGS = [
           '/D_SECURE_SCL=0',
           '/D_SECURE_ATL=0',
+          '/GS-',
           ],
   )
 
@@ -51,8 +52,10 @@ for omaha_version_info in env['omaha_versions_info']:
           'lzma.lib',
           'mi_exe_stub.lib',
           ('atls.lib',  'atlsd.lib')[temp_env.Bit('debug')],
-          ('minicrt.lib', 'libcmtd.lib')[temp_env.Bit('debug')],
-          ('',          'libcpmtd.lib')[temp_env.Bit('debug')],
+          #('minicrt.lib', 'libcmtd.lib')[temp_env.Bit('debug')],
+          #('',          'libcpmtd.lib')[temp_env.Bit('debug')],
+          ('libcmt.lib', 'libcmtd.lib')[temp_env.Bit('debug')],
+          ('libcpmt.lib', 'libcpmtd.lib')[temp_env.Bit('debug')],
           'shlwapi.lib',
           'version.lib',
           ],
@@ -68,7 +71,7 @@ for omaha_version_info in env['omaha_versions_info']:
 
       # This avoids missing __load_config_used
       LINKFLAGS = [
-          '/SAFESEH:NO'
+          '/SAFESEH:NO',
           ],
   )
 

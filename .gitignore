@@ -1,3 +1,5 @@
 
 # /
 /scons-out
+*.pyc
+*.idb

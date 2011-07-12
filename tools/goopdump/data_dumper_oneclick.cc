@@ -33,7 +33,7 @@ void DataDumperOneClick::DumpOneClickDataForVersion(const DumpLog& dump_log,
   dump_log.WriteLine(_T("Trying Plugin Version: %d"), plugin_version);
 
   CString oneclick_name;
-  oneclick_name.Format(_T("Google.OneClickCtrl.%d"), plugin_version);
+  oneclick_name.Format(_T("HouseOfLife.OneClickCtrl.%d"), plugin_version);
 
   CString reg_str;
   reg_str.Format(_T("HKCR\\%s"), oneclick_name);

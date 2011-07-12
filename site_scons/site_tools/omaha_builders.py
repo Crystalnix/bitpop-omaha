@@ -63,7 +63,7 @@ def _EnablePrecompile(env, target_name):
 
 def _SignDotNetManifest(env, target, unsigned_manifest):
   sign_manifest_cmd = ('@mage -Sign $SOURCE -ToFile $TARGET -TimestampUri '
-                       'http://timestamp.verisign.com/scripts/timstamp.dll ')
+                       'http://timestamp.comodoca.com/authenticode ')
 
   if env.Bit('build_server'):
     # If signing fails with the following error, the hash may not match any
