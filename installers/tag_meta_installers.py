@@ -213,8 +213,8 @@ def GetAllSetupExeInDirectory(dir):
   ret_files = []
   files = os.listdir(dir)
   for file in files:
-    regex = re.compile('^TEST_HouseOfLifeUpdateSetup_.*.exe$|'
-                       '^HouseOfLifeUpdateSetup_.*.exe$')
+    regex = re.compile('^TEST_GoogleUpdateSetup_.*.exe$|'
+                       '^GoogleUpdateSetup_.*.exe$')
     if not regex.match(file):
       continue
     ret_files.append(file)

@@ -14,7 +14,7 @@
 # limitations under the License.
 # ========================================================================
 
-# We always build the shell as GoogleUpdate_built.exe.
+# We always build the shell as GoogleUpdate_signed.exe.
 # For official builds, we copy the saved constant shell to the output directory.
 # For unofficial builds, we copy the built shell.
 # Otherwise, the goopdate.dll certificate check fails.
@@ -87,7 +87,7 @@ exe_env.Append(
 
 exe_inputs = [
     'winmain.cc',
-     '../common/signaturevalidator.cc',
+     '../base/signaturevalidator.cc',
      exe_env.RES('resource.rc'),
      ]
 
@@ -115,12 +115,12 @@ if exe_env['msc_ver'] >= 1400:
   exe_env['CCFLAGS'] += ['/GS-']
 
 unsigned_exe_output = exe_env.ComponentProgram(
-    prog_name='HouseOfLifeUpdate_unsigned.exe',
+    prog_name='BitPopUpdate_unsigned',
     source=exe_inputs,
 )
 
 sign_output = env.SignedBinary(
-    target='HouseOfLifeUpdate_signed.exe',
+    target='BitPopUpdate_signed.exe',
     source=unsigned_exe_output,
 )
 
@@ -131,7 +131,7 @@ env.Replicate('$STAGING_DIR', sign_output)
 # shell would fail to validate the certificates in the build.
 if env.Bit('build_server') and not env.Bit('test_certificate'):
   # Copy the constant shell from its checked in location.
-  source_shell = ('$MAIN_DIR/google_update/bin/%s/HouseOfLifeUpdate.exe' %
+  source_shell = ('$MAIN_DIR/google_update/bin/%s/BitPopUpdate.exe' %
       ('opt', 'dbg')[env.Bit('debug')])
 else:
   # Use the version we just built.
@@ -140,5 +140,5 @@ else:
 env.Replicate('$STAGING_DIR', source_shell, REPLICATE_REPLACE=[('_signed', '')])
 env.Replicate(target='$STAGING_DIR',
               source=sign_output[0],
-              REPLICATE_REPLACE=[('HouseOfLifeUpdate_signed', 'HouseOfLifeCrashHandler')]
+              REPLICATE_REPLACE=[('BitPopUpdate_signed', env['omaha_versions_info'][0].crash_handler_filename)]
 )

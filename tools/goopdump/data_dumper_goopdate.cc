@@ -204,7 +204,7 @@ HRESULT DataDumperGoopdate::GetDllDir(bool is_machine, CString* dll_path) {
 
 void DataDumperGoopdate::DumpGoogleUpdateIniFile(const DumpLog& dump_log) {
   DumpHeader header(dump_log, _T("GoogleUpdate.ini File Contents"));
-  DumpFileContents(dump_log, _T("c:\\googleupdate.ini"), 0);
+  DumpFileContents(dump_log, _T("c:\\bitpopupdate.ini"), 0);
 }
 
 void DataDumperGoopdate::DumpHostsFile(const DumpLog& dump_log) {
@@ -228,7 +228,7 @@ void DataDumperGoopdate::DumpHostsFile(const DumpLog& dump_log) {
 void DataDumperGoopdate::DumpUpdateDevKeys(const DumpLog& dump_log) {
   DumpHeader header(dump_log, _T("UpdateDev Keys"));
 
-  DumpRegistryKeyData(dump_log, _T("HKLM\\Software\\Google\\UpdateDev"));
+  DumpRegistryKeyData(dump_log, _T("HKLM\\Software\\HouseOfLife\\BitpopUpdateDev"));
 }
 
 void DataDumperGoopdate::DumpLogFile(const DumpLog& dump_log) {
@@ -363,7 +363,7 @@ void DataDumperGoopdate::DumpGoogleUpdateProcessInfo(const DumpLog& dump_log) {
     CString exe_file_name = process_entry32.szExeFile;
     exe_file_name.MakeLower();
 
-    if (exe_file_name.Find(_T("googleupdate.exe")) >= 0) {
+    if (exe_file_name.Find(_T("bitpopupdate.exe")) >= 0) {
       if (first) {
         first = false;
       } else {

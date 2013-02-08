@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-  <PatchCreation Id="E0D0D2C9-5836-4023-AB1D-54EC3B90AD03"
+  <PatchCreation Id="C7DBD047-AE4B-483F-B51E-95605BB1A32C"
     AllowMajorVersionMismatches="no"
     AllowProductCodeMismatches="no"
     CleanWorkingFolder="yes"
@@ -16,6 +16,7 @@
       Compressed="no"
       SummaryCodepage="1252" />
 
+    <!--TODO(omaha): Use kUrlMoreInformation for MoreInfoURL.-->
     <PatchMetadata
       Description="Patches Google Update"
       DisplayName="Google Update patch"
@@ -33,6 +34,6 @@
       </UpgradeImage>
     </Family>
 
-    <TargetProductCode Id="A92DAB39-4E2C-4304-9AB6-BC44E68B55E2" />
+    <TargetProductCode Id="B29A414C-43FE-40EF-8FC1-141C70C1503B" />
   </PatchCreation>
 </Wix>

@@ -85,6 +85,6 @@ env.Depends(
         ],
     dependency = [
         '%s/%s' % (clickonce_deploy_bin_dir, clickonce_binary),
-        '%s/HouseOfLifeUpdateSetup.exe' % (clickonce_deploy_bin_dir),
+        '%s/BitpopUpdateSetup.exe' % (clickonce_deploy_bin_dir),
         ]
 )

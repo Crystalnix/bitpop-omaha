@@ -37,26 +37,26 @@ namespace ClickOnceBootstrap {
           return;
         }
 
-        //string query_string =
-        //    ApplicationDeployment.CurrentDeployment.ActivationUri.Query;
-        //if (query_string.Length < 2) {
+        string query_string =
+            ApplicationDeployment.CurrentDeployment.ActivationUri.Query;
+        if (query_string.Length < 2) {
           // Query string will be of the form "?xyz=abc". Should have atleast
           // a question mark and atleast a single character to qualify as a
           // valid query string. Hence the check against "2".
-        //  return;
-        //}
+          return;
+        }
         // Remove the '?' prefix.
-        //query_string = query_string.Substring(1);
-        //query_string = HttpUtility.UrlDecode(query_string);
+        query_string = query_string.Substring(1);
+        query_string = HttpUtility.UrlDecode(query_string);
         string setup_path = Path.Combine(Application.StartupPath,
-                                          "HouseOfLifeUpdateSetup.exe");
+                                          "BitPopUpdateSetup.exe");
 
         ProcessStartInfo psi = new ProcessStartInfo();
         psi.FileName = setup_path;
         psi.Verb = "open";
-        psi.Arguments = "/installsource clickonce /install";
-        //psi.Arguments += query_string;
-        //psi.Arguments += "\"";
+        psi.Arguments = "/installsource clickonce /install \"";
+        psi.Arguments += query_string;
+        psi.Arguments += "\"";
         Process.Start(psi);
       } catch(Exception e) {
         MessageBox.Show(e.ToString());

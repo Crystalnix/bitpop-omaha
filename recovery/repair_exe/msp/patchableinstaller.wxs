@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-  <Product Id="A92DAB39-4E2C-4304-9AB6-BC44E68B55E2"
+  <Product Id="B29A414C-43FE-40EF-8FC1-141C70C1503B"
     Name="Google Update Helper"
     Language="1033"
     Codepage="1252"
